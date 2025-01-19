@@ -14,6 +14,11 @@ public class enemyController : MonoBehaviour
 
     [SerializeField] 
     float _moveSpeed = 5.0f;
+
+    [SerializeField] 
+     float _gravity = 2.0f; 
+  
+     float _yVelocity = 0.0f;
     void Start()
     {
         currentHealth = maxhealth;
@@ -30,12 +35,23 @@ public class enemyController : MonoBehaviour
 
         Vector3 velocity = direction * _moveSpeed;
 
-        _controller.Move(direction * Time.deltaTime);
+        if (!_controller.isGrounded)
+        {
+          _yVelocity -= _gravity;
+        }
+        
+         velocity.y = _yVelocity;
 
         if (currentHealth <=0)
         {
             Destroy(this.gameObject);
         }
+
+        direction.y = 0;
+
+        transform.rotation = Quaternion.LookRotation(direction);
+
+        _controller.Move(direction * Time.deltaTime);
     }
 
     public void damage(int damageValue)

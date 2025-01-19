@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   _moveSpeed: 5
+  _gravity: 2
 --- !u!143 &3607808462139885239
 CharacterController:
   m_ObjectHideFlags: 0

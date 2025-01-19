@@ -354,10 +354,16 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/enemyController.cs"
 "Assets/Script/BoxController.cs"
+"Assets/Script/CombatGui.cs"
+"Assets/Script/EnemyAnimation.cs"
+"Assets/Script/EnemyAttack.cs"
+"Assets/Script/Health.cs"
 "Assets/Script/LookX.cs"
 "Assets/Script/LookY.cs"
+"Assets/Script/PlayerAnimation.cs"
 "Assets/Script/PlayerController.cs"
 "Assets/Script/PlayerGui.cs"
+"Assets/Script/Ragdoll.cs"
 "Assets/Script/rifleWeapon.cs"
 -langversion:9.0
 /deterministic
